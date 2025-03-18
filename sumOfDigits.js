@@ -1,9 +1,9 @@
-const sumOfDigits = (num)=>{
+const sumOfDigits = (num) =>{
     let sum = 0;
-    for(let i=1;i<=num;i++){
-        sum+=i;
+    while(num > 0){
+      sum += num % 10;
+      num = Math.floor(num / 10);
     }
-    
-}
-
-sumOfDigits(10)
+    return sum;
+  }
+  console.log(sumOfDigits(123456))
